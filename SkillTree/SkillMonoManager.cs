@@ -34,11 +34,7 @@ public class SkillMonoManager : MonoBehaviour,IPointerEnterHandler,IPointerExitH
         }
 
     }
-    public void UpdateText()
-    {
-        //int value = int.Parse(text.text);
-        //text.text = (value + 1).ToString();
-    }
+   
     public void OnClickCtrl()
     {
         if(skills.UpgradeCounter < 5 && stats.skillPoint >0 && upgradeable.Upgradable() == true)
@@ -55,6 +51,7 @@ public class SkillMonoManager : MonoBehaviour,IPointerEnterHandler,IPointerExitH
 
     }
 
+    //to see the information of the skill when the skill is hovered over
     public void OnPointerEnter(PointerEventData eventData)
     {
         skills.ShowThePopUp(skillContentPanel, SkillSprite, skilltext, isHover);
