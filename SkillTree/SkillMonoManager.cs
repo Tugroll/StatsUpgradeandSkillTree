@@ -29,12 +29,14 @@ public class SkillMonoManager : MonoBehaviour,IPointerEnterHandler,IPointerExitH
 
         if (skills.OnClick == true && skills.UpgradeCounter < 5)
         {
+        // visual effect via Image.fullfillamount.
             skills.OnProcess(FillImage, FrameImage, IconImage);
             //UpdateText();
         }
 
     }
-   
+
+    // to check if the skill is clickable and Upgradable in Unity Button Event
     public void OnClickCtrl()
     {
         if(skills.UpgradeCounter < 5 && stats.skillPoint >0 && upgradeable.Upgradable() == true)
